@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { api } from "../../url";
 
 export default function Create() {
   const { register, handleSubmit } = useForm();
   const newTavar = (data) => {
     console.log(data);
-    axios.post("https://fakestoreapi.com/carts", data);
+    api.post("/carts", data);
   };
 
   return (
